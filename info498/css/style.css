@@ -1,0 +1,170 @@
+html,body{
+ 	font-family: 'Oswald';
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+h2{
+	font-size: 2.5em;
+	margin: 0 0 10px 10px;
+	text-transform:uppercase;
+}
+
+.Introduction{
+	position:absolute;
+	top:30%;
+	left:50%;
+	margin-top:-41px;
+	margin-left:100px;
+	font-size:4em;
+	color: white;
+}
+
+#Introduction1{
+	padding: 0em 0em 0em 0.25em;
+}
+
+#Introduction2{
+	padding:1.5em;
+}
+
+#Introduction3{
+	padding:3.3em 0 0 0;
+}
+
+.slide{
+	background-attachment: fixed;
+	width:100%;
+	height:100%;
+	background-size:100%;
+	position: relative;
+	box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.bur{
+	width:100%;
+	height:100%;
+	position: relative;
+	background:rgba(255,255,255,0.7);;
+}
+
+#slide1{
+	background-image:url('../background/first.jpg');
+
+}
+#slide2{
+	background: rgba(241,152,0,1);
+}
+
+#slide3, #slide5, #box2,#box4{
+	background:#eee;
+	padding: 1% 0;
+}
+
+#slide4, #box3{
+	background:#4CC6EF;
+	padding: 1% 0;
+}
+
+#box1{
+	background-attachment: fixed;
+	background:#4CC6EF;
+	width:100%;
+	height:100%;
+	position:relative;
+	box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+}
+
+
+/*Multi-variable Bar Chart Style */
+#chart{
+	padding-top:20px;
+	height: 90%;
+}
+
+#chart svg {
+  min-height:500px;
+}
+
+#chart h2{
+	color: rgba(31,119,180,1);
+}
+
+/* Work Minutes Bar Graph */
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: orange;
+}
+
+.bar:hover {
+  fill: orangered ;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+	/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+	/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+#minutes{
+	height:90%;
+	width:1200px;
+	margin:auto;
+}
+
+#slide4 h2{
+	color: white;
+}
+
+.tick line, .tick text{
+	font-size:15px;
+}
+
+/*Google GeoChart*/
+
+#slide5 h2{
+	color: #4CC6EF;
+}
+
+#GeoChart {
+	margin:0 auto;	
+}

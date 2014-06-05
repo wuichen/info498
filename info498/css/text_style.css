@@ -1,0 +1,39 @@
+.slideDes{
+	padding: 100px;
+	color: white;
+}
+
+.title{
+	font-size: 70px;
+}
+
+.introList li{
+	font-size: 40px;
+	margin: 30px;
+	list-style-type: circle;
+}
+
+#drinkPic,#heineken,#cor,#stats {
+	float: right;
+}
+
+#box2 .slideDes, #box4 .slideDes{
+	color: #404040;
+}
+
+.results{
+	margin-top: 20px;
+	font-size: 40px;
+}
+
+.tests{
+	font-size: 30px;
+}
+
+.tests li{
+	font-size: 20px;
+}
+
+.red{
+	color: red;
+}

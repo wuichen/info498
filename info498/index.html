@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Work Hard to Get Drunk</title>
+
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/text_style.css">
+		<script src="js/jQuery/jquery-1.11.1.js"></script>
+		<script src="js/jQuery/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="js/nv.d3.js"></script>
+		<script src="js/scrolling.js"></script>
+
+	</head>
+
+	<body>
+		<div class="slide" id="slide1" data-slide="1" data-stellar-background-ratio="0.5" data-stellar-offset-parent = "true">
+			<a class="button" data-slide="2" title=""></a>
+			<div class="Introduction" id="Introduction1"  data-stellar-ratio="1.2">Stephen Lee</div>
+			<div class="Introduction" id="Introduction2" data-stellar-ratio="1.5">Ichen Wu</div>
+			<div class="Introduction" id="Introduction3" data-stellar-ratio="1.3">Marco Vertucci</div>
+		</div><!--End Slide 1-->
+
+		<div class="slide" id="box1" data-slide ="1.1" data-stellar-background-ratio="1" data-stellar-offset-parent = "true">
+			<div class="slideDes">
+				<h1 class="title">Introduction and motivation</h1>
+				<img id="drinkPic" src="image/drink_beer.jpg" alt="drink beer" width="600px">
+				<ul class="introList">
+					<li>Beer and average income</li>
+					<li>A better standard of living mearsurement than Big Mac Index</li>
+					<li>Why we use Price of 6 pack Heineken</li>
+					<li>A fun project to work on</li>
+					<li>Simple way to adopt the knowledge we learn this quarter</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="slide" id="box2" data-slide ="1.2" data-stellar-background-ratio="1" data-stellar-offset-parent = "true">
+			<div class="slideDes">
+				<img id="heineken" src="image/heineken.png" alt="heineken" width="600px">
+				<h1 class="title">Data</h1>
+				<ul class="introList">
+					<li>nerdwallet.com’s cost of living in each different cities</li>
+					<li>Data : 26 different cities across U.S</li>
+					<li>Price of 6-pack Heineken beer</li>
+					<li>Median 2-bedroom apartment rent</li>
+					<li>average wage and per person</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="slide" id="box3" data-slide ="1.3" data-stellar-background-ratio="1" data-stellar-offset-parent = "true">
+			<div class="slideDes">
+				<h1 class="title">Methods</h1>
+				<img id="stats" src="image/statistics.png" alt="stats" width="600px">
+				<ul class="introList">
+					<li>Kruskal-Wallis Test</li>
+					<li>Spearman's rho test</li>
+					<li>Kendall Rank Coefficient</li>
+					<li>Graph out the dataset</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="slide" id="box4" data-slide ="1.4" data-stellar-background-ratio="1" data-stellar-offset-parent = "true">
+			<div class="slideDes">
+				<h1 class="title">Results</h1>
+				<img id="cor" src="image/cor.PNG" alt="cor" width="600px">
+					<p class="results">Kruskal-Wallis Test</p>
+					<ul class="tests">
+						<li>fail to reject null hypothesis: both wage/salary and rent, and the price of beer are identical populations</li>
+						<li>heineken by rent, <span class="red">p-value = 0.4058</span></li>
+						<li>heineken by salary/wage, <span class="red">p-value = 0.4624</span></li>
+					</ul class="tests">
+					<p class="results">Spearman's rho test</p>
+					<ul>
+						<li>reject null hypothesis: rho equals zero</li>
+						<li>heineken by rent, <span class="red">p-value = 0.01428, rho = 0.474675</span></li>
+						<li>heineken by salary/wage, <span class="red">p-value =  0.04569, rho = 0.3952097</span></li>
+					</ul class="tests">
+					<p class="results">Kendall tau rank correlation coefficient</p>
+					<ul class="tests">
+						<li>reject null hypothesis of heineken price and rent are not correlated</span></li>
+						<li>heineken by rent, <span class="red">p-value = 0.02729, tau  = 0.310565</span></li>
+						<li>heineken by salary/wage, <span class="red">p-value = 0.04702, tau = 0.2790782</span></li>
+					</ul>
+			</div>
+		</div>
+
+		<div class="slide" id="slide2" data-slide="2" data-stellar-background-ratio="1" data-stellar-offset-parent = "true">
+			<a class="button" data-slide="3" title=""></a>
+
+			<div id="chart">
+				<h2>Beer price and hourly wage comparison</h2>
+				<svg></svg>
+			</div>
+		</div>
+
+		<div class="slide" id="slide3" data-slide="3" data-stellar-background-ratio="0" data-stellar-offset-parent = "true">
+			<a class="button" data-slide="4" title=""></a>
+			<div id="wrapper">
+				<div id="scatterChart">
+				</div>
+
+				<div id="title">
+					<h1>Where do you want to get drunk?</h1>
+				</div>
+
+
+
+				<div id="menu">
+	<!-- 				<h2>&uarr; Y axis</h2>
+					<ul id="y-axis-menu"></ul>
+					<h2>&rarr; X axis</h2>
+	 -->				<ul id="x-axis-menu"></ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="slide" id="slide4" data-slide="4" data-stellar-background-ratio="0">
+			<h2>How long do you have to work to buy a drink?</h2>
+			<div id="minutes"></div>
+		</div>
+
+       <div class="slide" id="slide5" data-slide="5" data-stellar-background-ratio="0">
+       		<h2>HOW LONG DO YOU HAVE TO WORK TO BUY A DRINK?<h2>
+        	<div id="GeoChart" style="width: 70%; height: 70%;"></div>
+        </div>
+	</body>
+
+	<script type="text/javascript">
+		$(function(){
+			$.stellar({
+				scrollProperty: 'scroll',
+				hideDistantElements: true
+			});
+		});
+
+		<!--Scatter Graph JS-->
+		var _gaq = _gaq || [];
+	      _gaq.push(['_setAccount', 'UA-37639745-1']);
+	      _gaq.push(['_setDomainName', 'prcweb.co.uk']);
+	      _gaq.push(['_trackPageview']);
+
+	      (function() {
+	        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	      })();
+
+
+		$(window).on('resize',function(){location.reload();});
+	</script>
+    <!-- Load MultiBar graph -->
+    <link rel="stylesheet" type="text/css" href="css/nv.d3.css">
+    <script src="js/multibar.js"></script>
+
+    <!-- Load MultiScatter graph -->
+    <link rel="stylesheet" href="css/scatterStyle.css">
+    <link rel="stylesheet" href="css/svg.css">
+    <script src="js/underscore-min.js"></script>
+    <script src="js/scatter.js"></script>
+
+    <!-- Load Work Minute graph-->
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="js/minutes.js"></script>
+    <!-- Load Google Geo Chart-->
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script src="js/GeoChart.js"></script>
+</html>

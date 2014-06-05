@@ -1,0 +1,21 @@
+/* SVG styling */
+line {
+	stroke: #555;
+	stroke-width: 2px;
+}
+
+line#bestfit {
+	stroke: #ddd;
+	stroke-width: 10px;
+}
+
+#xAxis path, #yAxis path, #xAxis line, #yAxis line {
+	stroke: #ccc;
+	fill: none;
+	shape-rendering: crispEdges;
+}
+
+#wrapper text {
+	font-size: 12px;
+	fill: #888;
+}
